@@ -1,0 +1,36 @@
+[versions]
+sdk = "0.0.1"
+navigation = "2.7.7"
+detekt = "1.23.4"
+
+[libraries]
+commonDatabase = { group = "com.deadrudolph", name = "common_database", version.ref = "sdk" }
+commonDi = { group = "com.deadrudolph", name = "common_di", version.ref = "sdk" }
+commonDomain = { group = "com.deadrudolph", name = "common_domain", version.ref = "sdk" }
+commonNetwork = { group = "com.deadrudolph", name = "common_network", version.ref = "sdk" }
+
+featureHome = { group = "com.deadrudolph", name = "feature_home", version.ref = "sdk" }
+featureHomeDomain = { group = "com.deadrudolph", name = "feature_home_domain", version.ref = "sdk" }
+
+featureProfile = { group = "com.deadrudolph", name = "feature_profile", version.ref = "sdk" }
+featureProfileDomain = { group = "com.deadrudolph", name = "feature_profile_domain", version.ref = "sdk" }
+
+navigation = { group = "com.deadrudolph", name = "navigation", version.ref = "sdk" }
+uiComponents = { group = "com.deadrudolph", name = "uicomponents", version.ref = "sdk" }
+core = { group = "com.deadrudolph", name = "core", version.ref = "sdk" }
+detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+
+[bundles]
+common = [
+    "commonDatabase",
+    "commonDi",
+    "commonDomain",
+    "commonNetwork"
+]
+
+features = [
+    "featureHome",
+    "featureHomeDomain",
+    "featureProfile",
+    "featureProfileDomain"
+]
