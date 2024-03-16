@@ -14,8 +14,8 @@ afterEvaluate {
                 name = "GitHubPackages"
                 url = uri("https://maven.pkg.github.com/deadrudolph/template_mvvm_sdk")
                 credentials {
-                    username = /*githubProperties.getProperty("gpr.usr")*/ "deadrudolph"
-                    password = /*githubProperties.getProperty("gpr.key")*/ "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"
+                    username = githubProperties.getProperty("gpr.usr")
+                    password = githubProperties.getProperty("gpr.key")
                 }
             }
         }
@@ -32,4 +32,10 @@ afterEvaluate {
 
 android {
     namespace = "com.deadrudolph.common_database"
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }

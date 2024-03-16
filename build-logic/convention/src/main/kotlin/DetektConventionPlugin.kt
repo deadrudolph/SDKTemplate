@@ -29,7 +29,6 @@ class DetektConventionPlugin : Plugin<Project> {
         }
     }
 
-    @Suppress("SpreadOperator")
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {

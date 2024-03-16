@@ -1,5 +1,6 @@
 plugins {
     id("com.deadrudolph.kotlin.detekt")
+    id("com.deadrudolph.android.library.publish")
     alias(libs.plugins.com.google.devtools.kspt)
     alias(libs.plugins.androidLibrary) apply false
     alias(libs.plugins.kotlinAndroid) apply false

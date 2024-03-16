@@ -23,7 +23,7 @@ android {
 
 dependencies {
     debugImplementation(projects.common.commonDi)
-    debugImplementation(projects.core)
+    debugImplementation(sdk.core)
     debugImplementation(projects.navigation)
     debugImplementation(projects.uicomponents)
     debugImplementation(projects.features.home.featureHome)

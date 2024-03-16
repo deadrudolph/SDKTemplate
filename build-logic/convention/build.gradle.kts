@@ -49,5 +49,9 @@ gradlePlugin {
             id = "com.deadrudolph.android.di"
             implementationClass = "DiConventionPlugin"
         }
+        register("publish") {
+            id = "com.deadrudolph.android.library.publish"
+            implementationClass = "LibraryPublishingPlugin"
+        }
     }
 }

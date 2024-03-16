@@ -1,7 +1,5 @@
 [versions]
 sdk = "0.0.1"
-navigation = "2.7.7"
-detekt = "1.23.4"
 
 [libraries]
 commonDatabase = { group = "com.deadrudolph", name = "common_database", version.ref = "sdk" }
@@ -18,7 +16,6 @@ featureProfileDomain = { group = "com.deadrudolph", name = "feature_profile_doma
 navigation = { group = "com.deadrudolph", name = "navigation", version.ref = "sdk" }
 uiComponents = { group = "com.deadrudolph", name = "uicomponents", version.ref = "sdk" }
 core = { group = "com.deadrudolph", name = "core", version.ref = "sdk" }
-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 
 [bundles]
 common = [

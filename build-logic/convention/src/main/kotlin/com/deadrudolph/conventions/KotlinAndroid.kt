@@ -47,17 +47,10 @@ internal fun Project.configureCommonAndroid(
         signingConfigs {
             signingConfigs {
                 getByName("debug") {
-                    storeFile = file("$rootDir/app/debug.keystore")
+                    storeFile = file("$rootDir/sampleapp/debug.keystore")
                 }
 
                 create("release") {
-                    /** 1) Заиметь keystore файл
-                     *  2) Добавить значения пути к файлу и паролей
-                     *     в системные переменные по ключам типа:
-                     *     *Название проекта*_RELEASE_KEYSTORE_FILE_PATH
-                     *  3) Изменить ключи в функции ниже
-                     *  4) Обратиться к ближайшему Jenkins-гуру, чтобы это все
-                     *     также заработало на CI/CD */
                     val debugKeystoreFile = rootProject.file("mock_credentials.properties")
                     val releaseKeystoreFile = rootProject.file("release_keystore.properties")
 

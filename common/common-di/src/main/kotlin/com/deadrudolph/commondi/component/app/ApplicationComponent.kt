@@ -6,7 +6,7 @@ import dagger.Component
 
 /**
  * This component is intended to keep **system** dependencies that can be obtained only in the
- * `app` module.
+ * `sampleapp` module.
  */
 interface ApplicationComponent : BaseComponent {
 
