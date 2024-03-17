@@ -50,7 +50,7 @@ class LibraryPublishingPlugin : Plugin<Project> {
         val validDependencies = project.getValidDependencies()
 
         validDependencies.forEach { validDependency ->
-            subprojects.find { it.name.run { replace('-', '_') } == validDependency }?.let {
+            subprojects.find { it.name.replace('-', '_') == validDependency }?.let {
                 if (dependencies.contains(it.path)) return@forEach
                 addAllDependencies(it, dependencies)
             }

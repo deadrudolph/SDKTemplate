@@ -1,6 +1,5 @@
 package com.deadrudolph.commondi.component.app
 
-import com.deadrudolph.commondi.component.sampleapp.DaggerApplicationComponentInternal
 import com.deadrudolph.commondi.holder.DataComponentHolder
 
 object ApplicationComponentHolder :
