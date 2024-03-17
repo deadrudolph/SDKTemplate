@@ -27,9 +27,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.deadrudolph.core.base.action.ActivityActions
-import com.deadrudolph.navigation.GlobalNavTarget
+import com.deadrudolph.home.navigation.HomeGlobalNavTarget
 import com.deadrudolph.navigation.Navigator
 import com.deadrudolph.navigation.di.component.NavigationComponentHolder
+import com.deadrudolph.navigation.manager.NavigationManager
+import com.deadrudolph.profile.navigation.ProfileGlobalNavTarget
 import com.deadrudolph.template_mvvm_sdk.R
 import com.deadrudolph.template_mvvm_sdk.di.component.main.AppComponentHolder
 import com.deadrudolph.template_mvvm_sdk.navigation.host.NavigationComponent
@@ -143,12 +145,16 @@ internal class MainActivity : ComponentActivity(), ActivityActions {
             TabItem(
                 label = com.deadrudolph.feature_home.R.string.home,
                 icon = Icons.Default.Home,
-                route = GlobalNavTarget.HomeModule.target.route
+                route = NavigationManager.getNavTargetOrEmpty(
+                    HomeGlobalNavTarget.HOME_NAV_TARGET_KEY
+                ).route
             ),
             TabItem(
                 label = com.deadrudolph.feature_profile.R.string.profile,
                 icon = Icons.Default.Person,
-                route = GlobalNavTarget.ProfileModule.target.route
+                route = NavigationManager.getNavTargetOrEmpty(
+                    ProfileGlobalNavTarget.PROFILE_NAV_TARGET_KEY
+                ).route
             )
         )
     }

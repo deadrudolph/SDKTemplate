@@ -4,9 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import com.deadrudolph.home.navigation.HomeGlobalNavTarget
 import com.deadrudolph.home.navigation.addHomeFeatureGraph
-import com.deadrudolph.navigation.GlobalNavTarget
 import com.deadrudolph.navigation.Navigator
+import com.deadrudolph.navigation.manager.NavigationManager
 import com.deadrudolph.profile.navigation.addProfileFeatureGraph
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -34,7 +35,9 @@ fun NavigationComponent(
     // Navigation Directions
     NavHost(
         navController = navController,
-        startDestination = GlobalNavTarget.HomeModule.target.route
+        startDestination = NavigationManager.getNavTargetOrEmpty(
+            HomeGlobalNavTarget.HOME_NAV_TARGET_KEY
+        ).route
     ) {
         addHomeFeatureGraph { navController.popBackStack() }
         addProfileFeatureGraph { navController.popBackStack() }

@@ -1,6 +1,5 @@
 package com.deadrudolph.profile.navigation
 
-import com.deadrudolph.navigation.GlobalNavTarget
 import com.deadrudolph.navigation.NavTarget
 
 internal sealed class ProfileNavTarget(
@@ -11,6 +10,6 @@ internal sealed class ProfileNavTarget(
 
     companion object {
 
-        val moduleRoute: NavTarget = GlobalNavTarget.ProfileModule.target
+        val moduleRoute: NavTarget = ProfileGlobalNavTarget()
     }
 }

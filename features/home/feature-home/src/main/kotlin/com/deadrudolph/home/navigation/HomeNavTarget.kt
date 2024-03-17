@@ -1,6 +1,5 @@
 package com.deadrudolph.home.navigation
 
-import com.deadrudolph.navigation.GlobalNavTarget
 import com.deadrudolph.navigation.NavTarget
 
 internal sealed class HomeNavTarget(
@@ -10,6 +9,6 @@ internal sealed class HomeNavTarget(
 
     companion object {
 
-        val moduleRoute: NavTarget = GlobalNavTarget.HomeModule.target
+        val moduleRoute: NavTarget = HomeGlobalNavTarget()
     }
 }
