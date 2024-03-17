@@ -18,7 +18,11 @@ internal class HomeViewModelImpl @Inject constructor(
     override fun fetchContent() {
         viewModelScope.launch {
             usersFlow.value = Result.Loading(true)
-            usersFlow.value = getAllUsersUseCase(1)
+            usersFlow.value = getAllUsersUseCase(MOCK_PAGE)
         }
+    }
+
+    private companion object {
+        const val MOCK_PAGE = 1
     }
 }
