@@ -1,5 +1,5 @@
 [versions]
-sdk = "0.0.2"
+sdk = "0.0.3"
 
 [libraries]
 commonDatabase = { group = "com.deadrudolph", name = "common_database", version.ref = "sdk" }
