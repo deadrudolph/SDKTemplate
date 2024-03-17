@@ -29,7 +29,7 @@ afterEvaluate {
         repositories {
             maven {
                 name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/deadrudolph/template_mvvm_sdk")
+                url = uri("https://maven.pkg.github.com/deadrudolph/SDKTemplate")
                 credentials {
                     username = githubProperties.getProperty("gpr.usr")
                     password = githubProperties.getProperty("gpr.key")

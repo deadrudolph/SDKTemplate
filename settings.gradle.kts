@@ -27,7 +27,7 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven(url = "https://maven.pkg.github.com/deadrudolph/template_mvvm_sdk") {
+        maven(url = "https://maven.pkg.github.com/deadrudolph/SDKTemplate") {
             credentials {
                 username = "deadrudolph"
                 // Readonly token for Github Packages
@@ -45,7 +45,7 @@ dependencyResolutionManagement {
         gradlePluginPortal()
         maven(url = "https://jitpack.io")
         maven(url = "https://oss.sonatype.org/content/repositories/snapshots/")
-        maven(url = "https://maven.pkg.github.com/deadrudolph/template_mvvm_sdk") {
+        maven(url = "https://maven.pkg.github.com/deadrudolph/SDKTemplate") {
             credentials {
                 username = "deadrudolph"
                 // Readonly token for Github Packages
